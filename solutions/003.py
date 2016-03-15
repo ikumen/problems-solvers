@@ -23,9 +23,11 @@ def largest_prime_factor(n):
 		factor += 1
 	return largest
 
+
 def test_largest_prime_factor():
 	'''Test'''
 	assert 29 == largest_prime_factor(13195)
+
 
 def main():
 	'''Main runner, delegates to solution.'''
