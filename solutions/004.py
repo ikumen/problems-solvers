@@ -14,18 +14,18 @@ import os
 import pytest
 
 
-def largest_palindrom_product(num_digits):
+def largest_palindrome_product(num_digits):
 	'''Finds the largest palindromic product of numbers of num_digits long.'''
 	# create list of all numbers that are num_digits in length
 	numbers = _create_n_digit_numbers(num_digits)
 	largest = 0
 	# get product of every number vs other numbers
-	for i in numbers:
-		for j in numbers:
-			n = i * j
-			if _isPalindromic(n):
+	for n1 in numbers:
+		for n2 in numbers:
+			product = n1 * n2
+			if _isPalindromic(product):
 				# keep track of largest palindromic number
-				largest = max(largest, n)
+				largest = max(largest, product)
 	return largest
 
 
@@ -52,14 +52,14 @@ def _create_n_digit_numbers(n):
 	return numbers
 
 
-def test_largest_palindrom_product():
+def test_largest_palindrome_product():
 	'''Test'''
-	assert 9009 == largest_palindrom_product(2)
+	assert 9009 == largest_palindrome_product(2)
 
 
 def main():
 	'''Main runner, delegates to solution.'''
-	print(largest_palindrom_product(3))
+	print(largest_palindrome_product(3))
 
 
 if __name__ == '__main__':
