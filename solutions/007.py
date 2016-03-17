@@ -30,7 +30,7 @@ def find_nth_prime(nth_prime):
 			primes.append(number)
 		# check only odd numbers
 		number += 2
-	# nth prime was add post check that broke us out of loop
+	# nth prime was last added prime
 	return primes[-1]
 
 
