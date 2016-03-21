@@ -42,6 +42,9 @@ import os
 import pytest
 import time
 
+from helpers import load_matrix, build_path
+
+
 def max_path_sum(tree):
 	'''Finds the max total for path through given tree. NOTE: tree is in the 
 	form of a 2d matrix (with no padding).'''
@@ -77,7 +80,8 @@ def load_data_file(file_name):
 
 def main():
 	'''Main runner, delegates to solution.'''
-	tree = load_data_file('data/018.txt')
+	#tree = load_data_file('data/018.txt')
+	tree = load_matrix(build_path(__file__, 'data/018.txt'))
 	print(max_path_sum(tree))
 
 
